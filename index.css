@@ -1,0 +1,98 @@
+/* ==========================================
+   1. VARIABLES DE DISEÑO (Cambia los colores aquí)
+   ========================================== */
+:root {
+  --color-primario: #0ea5e9;    /* Azul moderno */
+  --color-exito: #10b981;       /* Verde */
+  --color-fondo: #f1f5f9;       /* Gris muy claro */
+  --color-tarjeta: #ffffff;     /* Blanco */
+  --color-titulo: #0f172a;      /* Gris casi negro */
+  --color-texto: #334155;       /* Gris oscuro para lectura */
+  --borde-radio: 8px;           /* Curvatura de esquinas */
+  --sombra: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* ==========================================
+   2. RESETEO GLOBAL (Para que todo se vea igual)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  padding: 2rem 1rem;
+}
+
+/* ==========================================
+   3. CLASES REUTILIZABLES (Componentes libres)
+   ========================================== */
+
+/* Contenedor centralizado */
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjeta contenedora de contenido */
+.tarjeta {
+  background-color: var(--color-tarjeta);
+  padding: 1.5rem;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra);
+  margin-bottom: 1.5rem;
+}
+
+/* Botones estándar y variantes */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primario {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.btn-exito {
+  background-color: var(--color-exito);
+  color: white;
+}
+
+/* Sistema de cuadrícula simple (Grid de 2 o 3 columnas) */
+.columnas-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Formulario básico estilizado */
+.entrada-texto {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+/* Títulos y subtítulos */
+h1, h2, h3 {
+  color: var(--color-titulo);
+  margin-bottom: 0.5rem;
+}
